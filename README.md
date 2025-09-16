@@ -31,6 +31,23 @@ day-night-toggle/
 
 ---
 
+## 🛠 Tech Stack
+
+* **HTML5**
+* **CSS3 (Glassmorphism, Animations, Gradients)**
+* **Vanilla JavaScript (No dependencies)**
+* **SVG Graphics**
+
+---
+
+## 📸 Preview
+
+<p align="center">  
+  <img src="./Preview.gif" alt="AM/PM or Day/Night Toggle Demo" width="600"/>  
+</p>  
+
+---
+
 ## ⚙️ How It Works
 
 The **AM/PM or Day/Night Toggle** is an interactive widget that visually switches between **day mode (AM)** and **night mode (PM)** while also updating the page’s theme.
@@ -122,23 +139,6 @@ Add this snippet where you want the toggle:
   });
 </script>
 ```
-
----
-
-## 🛠 Tech Stack
-
-* **HTML5**
-* **CSS3 (Glassmorphism, Animations, Gradients)**
-* **Vanilla JavaScript (No dependencies)**
-* **SVG Graphics**
-
----
-
-## 📸 Preview
-
-<p align="center">  
-  <img src="./Preview.gif" alt="AM/PM or Day/Night Toggle Demo" width="600"/>  
-</p>  
 
 ---
 
