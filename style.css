@@ -1,0 +1,243 @@
+/* Define color variables for easy customization */
+:root {
+  --transition-duration: 0.5s;
+  --text-light: #000000; /* Text color for light mode */
+  --text-dark: #ffffff;  /* Text color for dark mode */
+}
+
+/* Body layout: vertical stack (toggle row + footer) */
+body {
+  display: flex;
+  justify-content: center; /* center the container vertically */
+  align-items: center;     /* center horizontally */
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Times new roman", sans-serif;
+  transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* Ensure all text elements inherit color */
+body, body * {
+  color: inherit;
+  transition: color var(--transition-duration) ease-in-out;
+}
+
+/* Make text inherit color from body */
+body.light-mode .label {
+  color: black;
+}
+
+body.dark-mode .label {
+  color: white;
+}
+
+/* Light mode (sunset gradient) */
+body.light-mode {
+  background: linear-gradient(135deg, #ffb347, #ff5a5a, #ff3251, #ffcc33);
+  color: var(--text-light);
+}
+
+/* Dark mode (northern lights gradient) */
+body.dark-mode {
+  background: linear-gradient(120deg, #0d0d26, #1a1a3f, #00ffaa, #004466);
+  color: var(--text-dark);
+}
+
+/* Container for AM – Toggle – PM: horizontal row */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row; /* horizontal row */
+  align-items: center;
+  gap: 25px;          /* spacing between AM, toggle, PM */
+}
+
+/* Labels inherit color from body */
+.label {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  user-select: none;
+  color: inherit;     /* switches automatically with light/dark mode */
+  transition: color 0.5s ease-in-out;
+}
+
+/* Toggle container (Glassmorphism) */
+.toggle {
+  position: relative;
+  width: 350px;
+  height: 180px;
+  border-radius: 100px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  cursor: pointer;
+  transition: background 1s ease-in-out;
+}
+
+/* Knob (Sun/Moon) */
+.knob {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%) rotate(0deg);
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff8d9, #ffd369);
+  box-shadow: 0 0 40px rgba(255, 211, 105, 0.7);
+  z-index: 2;
+  transition: all 1s cubic-bezier(.77,0,.18,1);
+}
+.toggle.night .knob {
+  left: 180px;
+  background: radial-gradient(circle at 30% 30%, #d8dbe8, #a6aed1);
+  box-shadow: 0 0 25px rgba(180, 185, 220, 0.6);
+  transform: translateY(-50%) rotate(360deg);
+}
+
+/* Moon craters */
+.knob::before,
+.knob::after,
+.knob .crater-extra {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.15);
+  transition: opacity 1s;
+}
+
+/* Big crater */
+.knob .crater-extra {
+  width: 52px;
+  height: 52px;
+  top: 40px;
+  left: 90px;
+}
+
+/* Medium crater */
+.knob::before {
+  width: 40px;
+  height: 40px;
+  top: 100px;
+  left: 50px;
+}
+
+/* Small crater */
+.knob::after {
+  width: 24px;
+  height: 24px;
+  top: 35px;
+  left: 35px;
+}
+
+/* Hide craters in day mode */
+.toggle:not(.night) .knob::before,
+.toggle:not(.night) .knob::after,
+.toggle:not(.night) .knob .crater-extra {
+  opacity: 0;
+}
+
+/* Scene layers */
+.scene {
+  position: absolute;
+  inset: 0;
+  border-radius: 100px;
+  z-index: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Day Scene */
+.day-scene {
+  background: linear-gradient(to top, #fddbb0 40%, #fcb6b2 100%);
+  opacity: 1;
+}
+.day-scene svg { width: 100%; height: 100%; }
+
+/* Clouds animation */ 
+.cloud {
+  filter: blur(1px); /* soft, fluffy edges */
+  transform-origin: center;
+}
+
+/* Cloud 1 - fast small cloud */
+.cloud1 {
+  animation: drift1 15s linear infinite, float1 6s ease-in-out infinite alternate;
+}
+
+/* Cloud 2 - medium speed */
+.cloud2 {
+  animation: drift2 30s linear infinite, float2 8s ease-in-out infinite alternate;
+}
+
+/* Cloud 3 - slow large cloud */
+.cloud3 {
+  animation: drift3 60s linear infinite, float3 10s ease-in-out infinite alternate;
+}
+
+/* Horizontal drifting */
+@keyframes drift1 {
+  0% { transform: translateX(-120px); }
+  100% { transform: translateX(300px); }
+}
+
+@keyframes drift2 {
+  0% { transform: translateX(-150px); }
+  100% { transform: translateX(350px); }
+}
+
+@keyframes drift3 {
+  0% { transform: translateX(-180px); }
+  100% { transform: translateX(400px); }
+}
+
+/* Night Scene */
+.night-scene {
+  background: linear-gradient(to top, #1a1a40 30%, #2c3e70 100%);
+  opacity: 0;
+}
+.night-scene svg { width: 100%; height: 100%; }
+
+/* Stars animation */
+/* Stars twinkle + move */
+.stars circle {
+  animation: twinkleMove 6s ease-in-out infinite alternate;
+}
+.stars circle:nth-child(2) { animation-delay: 1s; }
+.stars circle:nth-child(3) { animation-delay: 2s; }
+.stars circle:nth-child(4) { animation-delay: 3s; }
+.stars circle:nth-child(5) { animation-delay: 4s; }
+
+@keyframes twinkleMove {
+  0%   { opacity: 0.3; transform: translateX(0) translateY(0); }
+  50%  { opacity: 1; transform: translateX(5px) translateY(-2px); }
+  100% { opacity: 0.3; transform: translateX(-5px) translateY(2px); }
+}
+
+/* Toggle state switching */
+.toggle.night .day-scene { opacity: 0; }
+.toggle.night .night-scene { opacity: 1; }
+
+/* Footer slightly above bottom */
+footer {
+  font-family: 'Figtree', sans-serif;
+  text-align: center;
+  font-size: 16px; 
+  font-weight: 500; 
+  width: 100%;
+  padding: 10px 0;
+  margin-top: auto;          /* push footer down naturally */
+  margin-bottom: 40px;       /* distance from bottom */
+  background: rgba(0,0,0,0.05);
+  color: inherit;
+}
+
+.scene svg * {
+  pointer-events: none;
+}

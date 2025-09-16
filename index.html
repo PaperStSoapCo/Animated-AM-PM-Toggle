@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Day/Night Toggle</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+  <div class="container">
+    <span class="label">AM</span>
+
+    <div class="toggle" id="dayNightToggle">
+    <div class="knob">
+      <!-- Moon craters -->
+      <span class="crater-extra"></span>
+    </div>
+
+    <!-- DAY SCENE -->
+    <div class="scene day-scene">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 180" preserveAspectRatio="none">
+        <g fill="white" opacity="0.9">
+        <!-- Cloud 1 -->
+        <g class="cloud cloud1">
+        <circle cx="35" cy="30" r="12"/>
+        <circle cx="48" cy="28" r="14"/>
+        <circle cx="60" cy="32" r="10"/>
+        <circle cx="45" cy="36" r="11"/>
+        </g>
+
+        <!-- Cloud 2 -->
+        <g class="cloud cloud2">
+        <circle cx="110" cy="40" r="14"/>
+        <circle cx="125" cy="38" r="16"/>
+        <circle cx="138" cy="42" r="12"/>
+        <circle cx="122" cy="46" r="13"/>
+        </g>
+
+        <!-- Cloud 3 -->
+        <g class="cloud cloud3">
+        <circle cx="170" cy="28" r="10"/>
+        <circle cx="182" cy="26" r="12"/>
+        <circle cx="194" cy="30" r="10"/>
+        <circle cx="180" cy="32" r="9"/>
+        </g>
+    </g>
+
+        <!-- Layered Buildings -->
+        <g class="buildings">
+        <!-- Background layer (far) -->
+        <rect x="20" y="80" width="40" height="100" fill="#a0a0c0"/>
+        <rect x="70" y="70" width="50" height="110" fill="#9a9ac0"/>
+        <rect x="130" y="90" width="35" height="90" fill="#8c8cb8"/>
+        <rect x="180" y="75" width="55" height="105" fill="#8787b0"/>
+        <rect x="240" y="95" width="40" height="85" fill="#7a7aa0"/>
+
+        <!-- Midground layer -->
+        <rect x="15" y="100" width="50" height="80" fill="#b5a5c0"/>
+        <rect x="65" y="85" width="55" height="95" fill="#c0a0c5"/>
+        <rect x="120" y="110" width="45" height="70" fill="#c89ac5"/>
+        <rect x="170" y="90" width="60" height="90" fill="#d18fc0"/>
+        <rect x="230" y="105" width="50" height="75" fill="#d98fb5"/>
+        <rect x="280" y="95" width="55" height="85" fill="#e07aa5"/>
+
+        <!-- Foreground layer with subtle windows -->
+        <rect x="40" y="120" width="30" height="60" fill="#e6a8b0"/>
+        <rect x="42" y="125" width="6" height="8" fill="#fff" opacity="0.3"/>
+        <rect x="50" y="125" width="6" height="8" fill="#fff" opacity="0.3"/>
+        <rect x="42" y="135" width="6" height="8" fill="#fff" opacity="0.3"/>
+        <rect x="50" y="135" width="6" height="8" fill="#fff" opacity="0.3"/>
+
+        <rect x="110" y="130" width="25" height="50" fill="#d88ca5"/>
+        <rect x="112" y="135" width="5" height="6" fill="#fff" opacity="0.3"/>
+        <rect x="120" y="135" width="5" height="6" fill="#fff" opacity="0.3"/>
+        <rect x="112" y="143" width="5" height="6" fill="#fff" opacity="0.3"/>
+        <rect x="120" y="143" width="5" height="6" fill="#fff" opacity="0.3"/>
+
+        <rect x="190" y="115" width="35" height="65" fill="#c57695"/>
+        <rect x="192" y="120" width="6" height="7" fill="#fff" opacity="0.3"/>
+        <rect x="200" y="120" width="6" height="7" fill="#fff" opacity="0.3"/>
+        <rect x="192" y="128" width="6" height="7" fill="#fff" opacity="0.3"/>
+        <rect x="200" y="128" width="6" height="7" fill="#fff" opacity="0.3"/>
+
+        <rect x="260" y="125" width="30" height="55" fill="#b56595"/>
+        <rect x="262" y="130" width="5" height="6" fill="#fff" opacity="0.3"/>
+        <rect x="270" y="130" width="5" height="6" fill="#fff" opacity="0.3"/>
+        <rect x="262" y="138" width="5" height="6" fill="#fff" opacity="0.3"/>
+        <rect x="270" y="138" width="5" height="6" fill="#fff" opacity="0.3"/>
+        </g>
+
+      </svg>
+    </div>
+
+    <!-- NIGHT SCENE -->
+    <div class="scene night-scene">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 180" preserveAspectRatio="none">
+        <!-- Moving Stars -->
+        <g class="stars">
+          <circle cx="40" cy="30" r="2" fill="white"/>
+          <circle cx="90" cy="20" r="2" fill="white"/>
+          <circle cx="150" cy="50" r="2" fill="white"/>
+          <circle cx="200" cy="25" r="2" fill="white"/>
+          <circle cx="260" cy="40" r="2" fill="white"/>
+          <circle cx="310" cy="15" r="2" fill="white"/>
+          <circle cx="330" cy="60" r="2" fill="white"/>
+        </g>
+
+        <!-- Layered Buildings -->
+        <g class="skyline">
+        <!-- Background layer (farthest, lighter but vibrant) -->
+        <g class="bg-buildings" opacity="0.4">
+            <rect x="10" y="90" width="45" height="70" fill="#4a4180"/>
+            <rect x="65" y="75" width="55" height="85" fill="#5b4a9a"/>
+            <rect x="125" y="95" width="40" height="60" fill="#3f3675"/>
+            <rect x="180" y="80" width="60" height="85" fill="#6950aa"/>
+            <rect x="245" y="100" width="45" height="65" fill="#423b7f"/>
+            <rect x="295" y="85" width="50" height="75" fill="#2c224f"/>
+        </g>
+
+        <!-- Midground layer (main skyline, more saturated) -->
+        <g class="mid-buildings" opacity="0.8">
+            <rect x="15" y="100" width="55" height="80" fill="#3b2f7a"/>
+            <rect x="70" y="85" width="60" height="95" fill="#563f95"/>
+            <rect x="135" y="110" width="45" height="70" fill="#33274e"/>
+            <rect x="185" y="90" width="65" height="90" fill="#5b3f91"/>
+            <rect x="250" y="105" width="50" height="75" fill="#3a2f6c"/>
+            <rect x="300" y="95" width="55" height="85" fill="#201a38"/>
+        </g>
+
+        <!-- Foreground layer (closest, most vibrant, with windows) -->
+        <g class="fg-buildings">
+            <!-- Building 1 -->
+            <rect x="30" y="110" width="35" height="70" fill="#4a3b9c"/>
+            <g fill="#fff" opacity="0.3">
+            <rect x="32" y="115" width="5" height="6"/>
+            <rect x="40" y="115" width="5" height="6"/>
+            <rect x="32" y="123" width="5" height="6"/>
+            <rect x="40" y="123" width="5" height="6"/>
+            </g>
+
+            <!-- Building 2 -->
+            <rect x="110" y="120" width="40" height="60" fill="#5c4fae"/>
+            <g fill="#fff" opacity="0.3">
+            <rect x="112" y="125" width="5" height="6"/>
+            <rect x="120" y="125" width="5" height="6"/>
+            <rect x="112" y="133" width="5" height="6"/>
+            <rect x="120" y="133" width="5" height="6"/>
+            </g>
+
+            <!-- Building 3 -->
+            <rect x="190" y="105" width="50" height="80" fill="#6b52c0"/>
+            <g fill="#fff" opacity="0.3">
+            <rect x="192" y="110" width="6" height="7"/>
+            <rect x="200" y="110" width="6" height="7"/>
+            <rect x="192" y="118" width="6" height="7"/>
+            <rect x="200" y="118" width="6" height="7"/>
+            </g>
+
+            <!-- Building 4 -->
+            <rect x="270" y="115" width="45" height="65" fill="#5b3fa0"/>
+            <g fill="#fff" opacity="0.3">
+            <rect x="272" y="120" width="5" height="6"/>
+            <rect x="280" y="120" width="5" height="6"/>
+            <rect x="272" y="128" width="5" height="6"/>
+            <rect x="280" y="128" width="5" height="6"/>
+            </g>
+        </g>
+        </g>
+
+      </svg>
+    </div>
+  </div>
+
+    <span class="label">PM</span>
+  </div>
+
+  <footer>
+    &copy; 2025 Sagarika. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
