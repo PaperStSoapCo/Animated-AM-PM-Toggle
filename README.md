@@ -92,7 +92,6 @@ cd day-night-toggle
 
 Simply open `index.html` in your browser.
 
----
 
 **3. Embed the Widget**
 
