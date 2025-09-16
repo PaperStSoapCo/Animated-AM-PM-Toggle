@@ -3,9 +3,9 @@
 A beautifully animated **Day/Night toggle** with SVG skylines, clouds, stars, and a glowing sun/moon knob.
 The widget automatically switches between light and dark themes based on system time, with smooth manual toggling.
 
- AM Mode  |  Night Mode  
+ AM Mode  |  PM Mode  
 :-------------------------:|:-------------------------:  
-<img src="./Screenshot (2).png" width="400"/> | <img src="./Screenshot (1).png" width="400"/> 
+<img src="./Screenshot (2).png" width="600"/> | <img src="./Screenshot (1).png" width="600"/> 
 ---
 
 ## ✨ Features
