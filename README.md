@@ -5,7 +5,7 @@ The widget automatically switches between light and dark themes based on system 
 
  AM Mode  |  Night Mode  
 :-------------------------:|:-------------------------:  
-<img src="./Screenshot (2).png" width="300"/> | <img src="./Sreenshot (1).png" width="300"/> 
+<img src="./Screenshot (2).png" width="300"/> | <img src="./Screenshot (1).png" width="300"/> 
 ---
 
 ## ✨ Features
